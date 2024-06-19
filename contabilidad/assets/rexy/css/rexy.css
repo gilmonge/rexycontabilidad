@@ -1,0 +1,346 @@
+/**************************************************
+    Sistema de contabilidad
+    Desarrollador: Rexy Studios
+    Año de creación: 2020
+    Última modificación del archivo: 21-04-2020
+**************************************************/
+/* Tipo grafia  */
+    @import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Baloo+2:wght@400;700&family=Baloo+Thambi+2:wght@500&family=Comic+Neue:wght@700&family=Montserrat:wght@500&family=Varela+Round&display=swap');
+
+    .rexy{ font-family: 'Baloo Thambi 2', cursive; font-weight: 100; }
+/* Tipo grafia  */
+
+body{ min-height: 100vh; background: #253649; }
+
+.container, .container-sm, .container-md, .container-lg, .container-xl { max-width: 90vw !important; }
+
+header{ background: rgba(255,255,255,.9); }
+.margin-header{ margin-top: 84px; }
+/* Ajuste submenu */
+    @media(min-width:992px){
+        .dropdown-submenu[data-toggle="hover"] > .dropdown-menu {
+            left: 100%;
+            transform: translateX(0) translateY(-47px) scale(.97);
+            margin-top: -22%;
+            margin-left: 48%;
+        }
+    }
+    .dropdown-submenu > .dropdown-item::after, .dropdown-submenu > .list-group-item::after {
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        margin-left: 0;
+        font-size: .75rem;
+        transform: translateY(-50%);
+    }
+/* Ajuste submenu */
+
+/* Logo */
+    .rexy-logo{ max-width: 140px !important; height: auto !important; }
+    @media(max-width: 991px){
+        .rexy-logo{ max-width: 100px !important; height: auto !important; }
+        .margin-header{ margin-top: 25px; }
+    }
+/* Logo */
+
+/* Colores Rexy Studios */
+    .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+        color: rgba(65, 126, 25, .9);
+    }
+    .navbar .dropdown-menu-xl .dropdown-header, .navbar .dropdown-menu-lg .dropdown-header {
+        padding-top: .375rem;
+        padding-bottom: .375rem;
+        color: #417E19;
+    }
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+        color: #253649;
+    }
+    a:hover {
+        text-decoration: none;
+        color: #417E19;
+    }
+    .navbar .dropdown-menu .list-group .list-group-item:hover .heading {
+        color: rgba(37, 54, 73, .8);
+    }
+    .navbar .dropdown-item:hover, .navbar .dropdown-item:focus {
+        color: rgba(37, 54, 73, .8);
+    }
+    .btn-primary {
+        border-color: #679349;
+        background-color: #679349;
+    }
+    .btn-primary:hover {
+        border-color: #417E19;
+        background-color: #417E19;
+    }
+    .btn-neutral:hover {
+        border-color: #417E19;
+        background-color: transparent;
+    }
+    .text-primary {
+        color: #417E19 !important;
+    }
+    a {
+        color: #253649;
+    }
+    .bg-primary {
+        background-color: #417E19 !important;
+    }
+    .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
+        color: #fff;
+        border-color: #417E19;
+        background-color: #417E19;
+    }
+    .bg-dark {
+        background-color: #253649 !important;
+    }
+    .bg-section-secondary{
+        background-color: #E6EAED !important;
+    }
+    .fill-section-secondary {
+        fill: #E6EAED !important;
+    }
+    .bg-dark {
+        background-color: #253649 !important;
+    }
+    .card {
+        background-color: #253649 !important;
+        border: 1px solid #253649 !important;
+    }
+    .card-body .text-muted {
+        color: #c0ccda!important;
+    }
+    .card-body .h5{ color: #ffffff; }
+    .rexy-encabezado-tabla{
+        background: #253649 !important;
+        color: #ffffff !important;
+    }
+    .rexy-encabezado-tabla tr th { font-size: 1rem !important; }
+    .rexy-cuerpo-tabla tr{
+        color: #253649 !important;
+    }
+    .rexy-cuerpo-tabla tr th, .rexy-cuerpo-tabla tr td { 
+        font-size: 1rem !important; 
+        border-bottom: 1px solid #253649 !important;
+    }
+    .btn-dark {
+        color: #ffffff !important;
+        border-color: #253649 !important;
+        background-color: #253649 !important;
+    }
+    input, select, textarea {
+        border-color: #253649 !important;
+    }
+    .bs-placeholder{
+        color: #253649 !important;
+        border-color: #253649 !important;
+        background-color: #fff !important;
+    }
+    .bootstrap-select .dropdown-menu li {
+        color: #253649;
+    }
+    .bootstrap-select .dropdown-menu li:hover {
+        background: #253649;
+        color: #ffffff;
+    }
+    .bootstrap-select .dropdown-menu .disabled:hover {
+        background: #ffffff;
+        color: #718096;
+    }
+    .bootstrap-select > .dropdown-toggle{
+        background: #fff;
+        border: 1px solid #253649;
+    }
+
+    .popover-dark{ background: #253649; }
+
+    .rexy-info{
+        color: #253649 !important;
+        font-weight: 100;
+        padding: 0px 15px 0px 15px;
+    }
+    .rexy-tr-dark{
+        background: #D7E0EA !important;
+    }
+    .text-dark{
+        color: #253649 !important;
+    }
+    .btn-outline-dark{
+        color: #253649 !important;
+        border-color: #253649 !important;
+    }
+    .btn-outline-dark:hover {
+        color: #fff !important;
+        border-color: #253649 !important;
+        background-color: #253649 !important;
+    }
+/* Colores Rexy Studios */
+
+/* Blog listado */
+    .rexy-imagen{ height: 140px; }
+/* Blog listado */
+
+/* Cards de agregar elementos */
+    .rexy-card-nuevo{
+        background-color: #ffffff !important;
+        border: 1px solid #253649 !important;
+        width: 100% !important;
+    }
+/* Cards de agregar elementos */
+
+/* corrige select de table */
+.dataTables_length label select{ padding: .5rem .25rem !important; }
+/* corrige select de table */
+
+/* tamaño de letra */
+    .rexy-letra-estandar{
+        font-size: .85rem !important;
+    }
+/* tamaño de letra */
+
+/* Ajuste de scroll */
+    .overflowX{
+        overflow: auto !important;
+    }
+/* Ajuste de scroll */
+
+/* modal dark */
+.modal-dark .modal-content {
+    color: #fff;
+    background-color: #253649;
+}
+/* modal dark */
+
+
+/* Cover load, aparece mientras se conecta con hacienda */
+    .cover-load{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.7);
+        z-index: 3000;
+        text-align: center;
+        padding-top: 300px;
+    }
+
+    .lds-ellipsis {
+        display: inline-block;
+        position: fixed;
+        width: 300px;
+        height: 300px;
+    }
+    .lds-ellipsis div {
+        position: absolute;
+        top: 27px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #fff;
+        animation-timing-function: cubic-bezier(0, 1, 1, 0);
+    }
+    .lds-ellipsis div:nth-child(1) {
+        left: 0px;
+        animation: lds-ellipsis1 0.6s infinite;
+    }
+    .lds-ellipsis div:nth-child(2) {
+        left: 5px;
+        animation: lds-ellipsis2 0.6s infinite;
+    }
+    .lds-ellipsis div:nth-child(3) {
+        left: 29px;
+        animation: lds-ellipsis2 0.6s infinite;
+    }
+    .lds-ellipsis div:nth-child(4) {
+        left: 52px;
+        animation: lds-ellipsis3 0.6s infinite;
+    }
+    @keyframes lds-ellipsis1 {
+        0% {
+            transform: scale(0);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    @keyframes lds-ellipsis3 {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(0);
+        }
+    }
+    @keyframes lds-ellipsis2 {
+        0% {
+            transform: translate(0, 0);
+        }
+        100% {
+            transform: translate(19px, 0);
+        }
+    }
+/* Cover load, aparece mientras se conecta con hacienda */
+
+/* loader */
+    .loader {
+        border: 10px solid #253649;
+        border-radius: 50%;
+        border-top: 10px solid #679349;
+        border-bottom: 10px solid #679349;
+        width: 40px;
+        height: 40px;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+    }
+
+    @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+/* loader */
+
+/* Requeridos */
+.asteriscos{
+    color: red;
+}
+/* Requeridos */
+
+/* Modal abierto */
+    .modal-open {
+        max-height: inherit !important;
+        padding-right: 0px !important;
+    }
+    .modal-open .fixed-top, .modal-open footer {
+        padding-right: 0px !important;
+    }
+/* Modal abierto */
+
+#listado_length > label > select {
+    min-width: 80px;
+}
+
+.bootstrap-select{
+    width: 100% !important;
+}
+
+div.form-group.fv-plugins-icon-container.has-danger > i ,
+div.form-group.fv-plugins-icon-container.has-success > i{
+    margin-top: 1.7rem;
+}
+
+div.form-group.fv-plugins-icon-container.has-danger > .fv-plugins-message-container > div{
+    background: #F8EDEF;
+    color: #8d4353;
+    border: #f25767 1px solid;
+    font-size: .875rem;
+    position: relative;
+    padding: .5rem .5rem;
+    margin-bottom: 1rem;
+    border-radius: .375rem;
+}

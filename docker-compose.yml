@@ -1,0 +1,57 @@
+version: "3.9"
+
+services:
+    mariadbcontabilidad:
+        container_name: mariadbcontabilidad
+        build: 
+            context: .
+            dockerfile: mariadb/Dockerfile
+        volumes:
+            - ./mariadb/db:/var/lib/mysql
+        #restart: always
+        env_file:
+            - .env
+        environment:
+            MYSQL_DATABASE: rexy_contabilidad
+        command: 
+            - "--default-authentication-plugin=mysql_native_password"
+        networks:
+            - contabilidad-network
+        expose:
+            - "3306"
+        ports:
+            - 8063:3306
+    phpcontabilidad:
+        container_name: phpcontabilidad
+        build:
+            context: .
+            dockerfile: php/Dockerfile
+        depends_on:
+            - mariadbcontabilidad
+        networks:
+            - contabilidad-network
+        volumes:
+            - ./contabilidad/:/var/www/html/
+            - ./logs/nginx:/var/log/nginx/
+    nginxcontabilidad:
+        container_name: nginx
+        build:
+            context: .
+            dockerfile: nginx/Dockerfile
+        depends_on:
+            - mariadbcontabilidad
+            - phpcontabilidad
+        networks:
+            - contabilidad-network
+        ports:
+            - "8080:80"
+        volumes:
+            - ./contabilidad/:/var/www/html/
+            - ./logs/nginx:/var/log/nginx/
+networks:
+    contabilidad-network:
+        driver: bridge
+volumes:
+    mariadbcontabilidad:
+    phpcontabilidad:
+    nginxcontabilidad:
